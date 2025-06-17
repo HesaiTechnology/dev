@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Synchronize Azimuth Angle | Developer Docs – Hesai Technology</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://hesaitechnology.github.io/dev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://hesaitechnology.github.io/dev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://hesaitechnology.github.io/dev/docs/how_to_guides/sync_angle/"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:locale:alternate" content="zh_CN"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Synchronize Azimuth Angle | Developer Docs – Hesai Technology"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/dev/img/website/favicon.svg"><link data-rh="true" rel="canonical" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/sync_angle/"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/sync_angle/" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/zh/docs/how_to_guides/sync_angle/" hreflang="zh-CN"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/sync_angle/" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;family=Noto+Sans+Mono:wght@400;500;700&amp;display=swap"><link rel="stylesheet" href="/dev/assets/css/styles.d61cd09d.css">
-<script src="/dev/assets/js/runtime~main.29fc415a.js" defer="defer"></script>
+<script src="/dev/assets/js/runtime~main.50b621de.js" defer="defer"></script>
 <script src="/dev/assets/js/main.f967e3c4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -41,23 +41,24 @@
 </ul>
 <p>Hesai lidar supports the following methods to configure angle synchronization parameters:</p>
 <ol>
-<li>Web control page (using XT32 as an example)</li>
+<li>Web control page (applicable to Pandar series/QT series/XT series models)</li>
 </ol>
 <img src="/dev/img/syncangle_web.png" alt="syncangle_web" style="display:block;margin:0 auto;width:80%">
 <ol start="2">
-<li>LidarUtilities software (using OT128 as an example)</li>
+<li>LidarUtilities software (applicable to OT128/AT128P models)</li>
 </ol>
 <img src="/dev/img/syncangle_LU.png" alt="syncangle_LU" style="display:block;margin:0 auto;width:80%">
+<p><em>Note: LidarUtilities can be downloaded from Hesai&#x27;s official website (<a href="https://www.hesaitech.com/downloads#ot128" target="_blank" rel="noopener noreferrer">OT128</a>，<a href="https://www.hesaitech.com/downloads#at128" target="_blank" rel="noopener noreferrer">AT128P</a>).</em></p>
 <ol start="3">
-<li>HTTP API (using XT32 as an example)</li>
+<li>HTTP API (using XT32 as example)</li>
 </ol>
 <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">HTTP://&lt;IP&gt;/pandar.cgi?action=set&amp;object=lidar_sync&amp;key=sync_angle&amp;value=&lt;VALUE&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>The VALUE parameter configuration is as follows:</p>
 <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&quot;sync&quot;: 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&quot;syncAngle&quot;: 0</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>Here, &#x27;sync&#x27; indicates whether angle synchronization is enabled, 0 means disabled (default) and 1 means enabled; &#x27;syncAngle&#x27; indicates the sync angle value in degrees, ranging from 0~359 (default value is 0).</p>
 <p><em>Note: For detailed using method of HTTP API, refer to <a href="/dev/docs/how_to_guides/HTTP_api/">Use HTTP API</a>.</em></p>
-<ol start="4">
-<li>TCP API (using XT32 as an example)</li>
+<ol>
+<li>TCP API (using XT32 as example)</li>
 </ol>
 <p>Send the following TCP API command to the lidar:</p>
 <p>Command name: Set Sync Angle; Command code: <strong>0x18</strong>;</p>

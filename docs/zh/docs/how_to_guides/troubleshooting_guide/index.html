@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">常见问题排查 | Developer Docs – Hesai Technology</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://hesaitechnology.github.io/dev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://hesaitechnology.github.io/dev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://hesaitechnology.github.io/dev/zh/docs/how_to_guides/troubleshooting_guide/"><meta data-rh="true" property="og:locale" content="zh_CN"><meta data-rh="true" property="og:locale:alternate" content="en_US"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="常见问题排查 | Developer Docs – Hesai Technology"><meta data-rh="true" name="description" content="概述"><meta data-rh="true" property="og:description" content="概述"><link data-rh="true" rel="icon" href="/dev/img/website/favicon.svg"><link data-rh="true" rel="canonical" href="https://hesaitechnology.github.io/dev/zh/docs/how_to_guides/troubleshooting_guide/"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/troubleshooting_guide/" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/zh/docs/how_to_guides/troubleshooting_guide/" hreflang="zh-CN"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/troubleshooting_guide/" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;family=Noto+Sans+Mono:wght@400;500;700&amp;display=swap"><link rel="stylesheet" href="/dev/zh/assets/css/styles.d61cd09d.css">
-<script src="/dev/zh/assets/js/runtime~main.5e2b2a29.js" defer="defer"></script>
+<script src="/dev/zh/assets/js/runtime~main.ab800f39.js" defer="defer"></script>
 <script src="/dev/zh/assets/js/main.507d1acd.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -24,7 +24,7 @@
 <ol>
 <li>若使用了禾赛标配的接线盒，检查接线盒指示灯：正常状态下接线盒的蓝色 LED 指示灯应为常亮状态（如下图所示）；</li>
 </ol>
-<img src="/dev/img/box_indicator.jpg" alt="Hesai logo" style="display:block;margin:0 auto;width:60%">
+<img src="/dev/img/box_indicator.jpg" alt="box_indicator" style="display:block;margin:0 auto;width:60%">
 <ul>
 <li>若此指示灯不亮，检查供电端状态与硬件连接是否正常（如有条件可使用其他正常接线盒或激光雷达进行交叉实验，确认是否为接线盒自身故障）；</li>
 <li>若此指示灯闪烁，则应为激光雷达与接线盒的以太网配置不一致（如以太网带宽配置不同或主从模式不匹配）导致，可联系禾赛技术支持进一步排查确认；</li>
@@ -32,14 +32,15 @@
 <ol start="2">
 <li>确认激光雷达是否正常发光：可使用红外相机，或可看见红外波段的摄像头（推荐 iphone 前置摄像头，或华为手机等），对准雷达光罩表面拍摄，检查是否有紫红色闪烁光斑（类似下图所示）；</li>
 </ol>
-<img src="/dev/img/lasercheck.png" alt="Hesai logo" style="display:block;margin:0 auto;width:50%">
+<img src="/dev/img/lasercheck.png" alt="lasercheck" style="display:block;margin:0 auto;width:50%">
 <ol start="3">
 <li>若激光雷达连接正常但没有正常发光，确认其是否被设置在 standby 模式（standby 模式下激光雷达处于停转不发光状态），可通过网页或 LidarUtilities 进入激光雷达控制页面查看，如下图所示：</li>
 </ol>
-<p><em>网页控制页面（以 QT128 为例）</em></p>
-<img src="/dev/img/standbyweb.jpg" alt="Hesai logo" style="display:block;margin:0 auto;width:80%">
-<p><em>LidarUtilities 界面（以 AT128P 为例）</em></p>
-<img src="/dev/img/standbyLU.png" alt="Hesai logo" style="display:block;margin:0 auto;width:80%">
+<p><em>网页控制页面（Pandar 系列/QT 系列/XT 系列等型号）</em></p>
+<img src="/dev/img/standbyweb.jpg" alt="standbyweb" style="display:block;margin:0 auto;width:80%">
+<p><em>LidarUtilities 界面（OT128/AT128P 等型号）</em></p>
+<img src="/dev/img/standbyLU.png" alt="standbyLU" style="display:block;margin:0 auto;width:80%">
+<p>LidarUtilities 软件可通过禾赛官网获取（<a href="https://www.hesaitech.com/cn/downloads#ot128" target="_blank" rel="noopener noreferrer">OT128</a>，<a href="https://www.hesaitech.com/cn/downloads#at128" target="_blank" rel="noopener noreferrer">AT128P</a>）。</p>
 <p><em>注：若无法通过网页或 LidarUtilities 进入激光雷达控制页面，可参照<a href="/dev/zh/docs/how_to_guides/network_config/#%E5%B8%B8%E8%A7%81%E4%BB%A5%E5%A4%AA%E7%BD%91%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5">常见以太网问题</a> 内容进行排查。</em></p>
 <p>若按照上述方法操作后，激光雷达仍无法正常启动，请联系禾赛技术支持。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7 numbered-heading" data-number="3" data-text="点云显示类问题（PandarView2）" data-toc-number="3 点云显示类问题（" id="点云显示类问题pandarview2">3 点云显示类问题（PandarView2）<a href="#点云显示类问题pandarview2" class="hash-link" aria-label="3 点云显示类问题（PandarView2）的直接链接" title="3 点云显示类问题（PandarView2）的直接链接">​</a></h2>
@@ -63,20 +64,20 @@
 <li>检查主机防火墙</li>
 </ul>
 <p>在使用 PandarView2 软件播放实时点云过程中，需要保持电脑主机防火墙为关闭状态，或允许 PandarView2 程序通过防火墙（设置方法如下图所示）：</p>
-<img src="/dev/img/pv2_firewall.png" alt="Hesai logo" style="display:block;margin:0 auto;width:80%">
+<img src="/dev/img/pv2_firewall.png" alt="pv2_firewall" style="display:block;margin:0 auto;width:80%">
 <ul>
 <li>检查激光雷达网络参数设置</li>
 </ul>
 <p>a. 激光雷达配置为<strong>广播模式</strong>: 需将 Pandarview2 - Listen for Data 弹窗中的<strong>UDP Port</strong>选项更改为实际设置的目的端口号（该参数的出厂默认值为<strong>2368</strong>，实际值可通过激光雷达控制页面获取，如下图所示）。</p>
-<img src="/dev/img/pv_broadcast.png" alt="Hesai logo" style="display:block;margin:0 auto;width:80%">
-<p><em>网页控制页面（以 QT128 为例）</em></p>
-<img src="/dev/img/destport_web.jpg" alt="Hesai logo" style="display:block;margin:0 auto;width:80%">
-<p><em>LidarUtilities 界面（以 OT128 为例）</em></p>
-<img src="/dev/img/destport_LU.jpg" alt="Hesai logo" style="display:block;margin:0 auto;width:80%">
+<img src="/dev/img/pv_broadcast.png" alt="pv_broadcast" style="display:block;margin:0 auto;width:80%">
+<p><em>网页控制页面（Pandar 系列/QT 系列/XT 系列等型号）</em></p>
+<img src="/dev/img/destport_web.jpg" alt="destport_web" style="display:block;margin:0 auto;width:80%">
+<p><em>LidarUtilities 界面（OT128/AT128P 等型号）</em></p>
+<img src="/dev/img/destport_LU.jpg" alt="destport_LU" style="display:block;margin:0 auto;width:80%">
 <p>b. 激光雷达配置为<strong>单播模式</strong>: 需将电脑主机 IP 地址配置为激光雷达的<strong>Destination IP</strong>（该参数可通过激光雷达控制页面获取），并将 Pandarview2 - Listen for Data 弹窗中的<strong>UDP Port</strong>选项更改为实际设置的目的端口号（该参数的出厂默认值为<strong>2368</strong>，实际值可通过激光雷达控制页面获取）。</p>
 <p>c. 激光雷达配置为<strong>组播模式</strong>: 需将 Pandarview2 - Listen for Data 弹窗中的<strong>UDP Port</strong>选项更改为实际设置的目的端口号（该参数的出厂默认值为<strong>2368</strong>，实际值可通过激光雷达控制页面获取），同时选中弹窗里的<strong>Multicast IP</strong>选项并配置为激光雷达的<strong>Destination IP</strong>（该参数可通过激光雷达控制页面获取）。</p>
 <p><em>注：激光雷达组播模式的具体配置方法详见<a href="/dev/zh/docs/how_to_guides/network_config/#%E7%BB%84%E6%92%AD">如何配置以太网-组播</a>。</em></p>
-<img src="/dev/img/pv_multicast.png" alt="Hesai logo" style="display:block;margin:0 auto;width:80%">
+<img src="/dev/img/pv_multicast.png" alt="pv_multicast" style="display:block;margin:0 auto;width:80%">
 <p><em>注：若当前电脑使用了以太网口转 USD 接口适配器连接激光雷达，有较小概率会引起 Pandarview2 点云不显示现象，建议更换为可以使用网线直连激光雷达的电脑进行点云实时播放操作。</em></p>
 <ol start="2">
 <li><strong>点云显示不完整</strong></li>
@@ -110,18 +111,18 @@
 <p>检查回放点云文件是否为.pcap 格式（<em>注：使用 Wireshark 软件录制点云文件时，默认的数据保存格式为.pcapng，需要手动修改为.pcap 格式</em>）；</p>
 </li>
 </ul>
-<img src="/dev/img/wireshark_record.jpg" alt="Hesai logo" style="display:block;margin:0 auto;width:80%">
+<img src="/dev/img/wireshark_record.jpg" alt="wireshark_record" style="display:block;margin:0 auto;width:80%">
 <ul>
 <li>检查点云 pcap 文件中的 UDP 报文数据长度和格式是否正确：可在 Wireshark 软件中查看并与该激光雷达手册中定义的点云 UDP 报文长度进行对比确认（如下图所示，以 QT128 为例)；</li>
 </ul>
-<img src="/dev/img/udplength.jpg" alt="Hesai logo" style="display:block;margin:0 auto;width:80%">
+<img src="/dev/img/udplength.jpg" alt="udplength" style="display:block;margin:0 auto;width:80%">
 <ol start="2">
 <li><strong>点云显示异常</strong></li>
 </ol>
 <ul>
 <li>若点云排列明显不规则，需确认当前点云文件对应激光雷达的角度修正文件是否已正常导入（操作方法如下图所示）；</li>
 </ul>
-<img src="/dev/img/pv_corr.png" alt="Hesai logo" style="display:block;margin:0 auto;width:70%">
+<img src="/dev/img/pv_corr.png" alt="pv_corr" style="display:block;margin:0 auto;width:70%">
 <ul>
 <li>若点云播放时闪烁，需检查当前点云 pcap 文件是否存在丢包（可通过 Wireshark 查看或联系禾赛技术支持）；若未出现丢包，检查电脑主机操作系统的硬件性能和相关驱动配置是否满足要求（参考前述点云实时播放部分排查方法），重启电脑或更换另一台电脑进行测试确认。</li>
 </ul>

@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Troubleshooting | Developer Docs – Hesai Technology</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://hesaitechnology.github.io/dev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://hesaitechnology.github.io/dev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://hesaitechnology.github.io/dev/docs/how_to_guides/troubleshooting_guide/"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:locale:alternate" content="zh_CN"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Troubleshooting | Developer Docs – Hesai Technology"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/dev/img/website/favicon.svg"><link data-rh="true" rel="canonical" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/troubleshooting_guide/"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/troubleshooting_guide/" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/zh/docs/how_to_guides/troubleshooting_guide/" hreflang="zh-CN"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/troubleshooting_guide/" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;family=Noto+Sans+Mono:wght@400;500;700&amp;display=swap"><link rel="stylesheet" href="/dev/assets/css/styles.d61cd09d.css">
-<script src="/dev/assets/js/runtime~main.29fc415a.js" defer="defer"></script>
+<script src="/dev/assets/js/runtime~main.50b621de.js" defer="defer"></script>
 <script src="/dev/assets/js/main.f967e3c4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -36,11 +36,12 @@
 <ol start="3">
 <li>If the lidar is connected properly but not emitting light, check if it is set to standby mode (in standby mode, the lidar stops rotating and does not emit light). Users can check this via the web interface or LidarUtilities software, as shown below:</li>
 </ol>
-<p><em>Web control page (using QT128 as an example)</em></p>
+<p><em>Web control page  (Pandar series/QT series/XT series)</em></p>
 <img src="/dev/img/standbyweb.jpg" alt="standbyweb" style="display:block;margin:0 auto;width:80%">
-<p><em>LidarUtilities interface (using AT128P as an example)</em></p>
+<p><em>lidarUtilities interface (OT128 / AT128P)</em></p>
 <img src="/dev/img/standbyLU.png" alt="standbyLU" style="display:block;margin:0 auto;width:80%">
-<p><em>Note: If users cannot access the lidar control page via the webpage or LidarUtilities, please refer to <a href="/dev/docs/how_to_guides/network_config/#common-ethernet-issues-troubleshooting">Common Ethernet Issues</a> for troubleshooting.</em></p>
+<p>LidarUtilities can be downloaded from Hesai&#x27;s official website (<a href="https://www.hesaitech.com/downloads#ot128" target="_blank" rel="noopener noreferrer">OT128</a>，<a href="https://www.hesaitech.com/downloads#at128" target="_blank" rel="noopener noreferrer">AT128P</a>).</p>
+<p><em>Note: If users cannot access the lidar control page via the webpage or LidarUtilities, please refer to <a href="/dev/docs/how_to_guides/network_config/#common-ethernet-issues-troubleshooting">Common Ethernet Issues Troubleshooting</a>.</em></p>
 <p>If the lidar still fails to start after following the above steps, please contact Hesai technical support.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7 numbered-heading" data-number="3" data-text="Point Cloud Display Issues (PandarView2)" data-toc-number="3" id="point-cloud-display-issues-pandarview2">3 Point Cloud Display Issues (PandarView2)<a href="#point-cloud-display-issues-pandarview2" class="hash-link" aria-label="Direct link to 3 Point Cloud Display Issues (PandarView2)" title="Direct link to 3 Point Cloud Display Issues (PandarView2)">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7 numbered-heading" data-number="3.1" data-text="PandarView2 Installation" data-toc-number="3.1" id="pandarview2-installation">3.1 PandarView2 Installation<a href="#pandarview2-installation" class="hash-link" aria-label="Direct link to 3.1 PandarView2 Installation" title="Direct link to 3.1 PandarView2 Installation">​</a></h3>
@@ -68,9 +69,9 @@
 </ul>
 <p>a. If the lidar is configured in <strong>broadcast mode</strong>, change the <strong>UDP Port</strong> option in the PandarView2 - &#x27;Listen for Data&#x27; popout to the actual destination port value (default factory setting is <strong>2368</strong>, actual value can be obtained from the lidar control page, as shown below).</p>
 <img src="/dev/img/pv_broadcast.png" alt="pv_broadcast" style="display:block;margin:0 auto;width:80%">
-<p><em>Web control page (using QT128 as an example)</em></p>
+<p><em>Web control page  (Pandar series/QT series/XT series)</em></p>
 <img src="/dev/img/destport_web.jpg" alt="destport_web" style="display:block;margin:0 auto;width:80%">
-<p><em>LidarUtilities interface (using OT128 as an example)</em></p>
+<p><em>lidarUtilities interface (OT128 / AT128P)</em></p>
 <img src="/dev/img/destport_LU.jpg" alt="destport_LU" style="display:block;margin:0 auto;width:80%">
 <p>b. If the lidar is configured in <strong>unicast mode</strong>, set the host computer&#x27;s IP address to the lidar&#x27;s <strong>Destination IP</strong> (this parameter can be obtained from the lidar control page) and change the <strong>UDP Port</strong> option in the PandarView2 - &#x27;Listen for Data&#x27; popout to the actual destination port value.</p>
 <p>c. If the lidar is configured in <strong>multicast mode</strong>, change the <strong>UDP Port</strong> option in the PandarView2 - &#x27;Listen for Data&#x27; popout to the actual destination port value, and select the <strong>Multicast IP</strong> option in the popout, configuring it to the lidar&#x27;s <strong>Destination IP</strong> (this parameter can be obtained from the lidar control page).</p>

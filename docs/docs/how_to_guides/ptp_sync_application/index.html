@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Synchronize Time using PTP | Developer Docs – Hesai Technology</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://hesaitechnology.github.io/dev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://hesaitechnology.github.io/dev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://hesaitechnology.github.io/dev/docs/how_to_guides/ptp_sync_application/"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:locale:alternate" content="zh_CN"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Synchronize Time using PTP | Developer Docs – Hesai Technology"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/dev/img/website/favicon.svg"><link data-rh="true" rel="canonical" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/ptp_sync_application/"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/ptp_sync_application/" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/zh/docs/how_to_guides/ptp_sync_application/" hreflang="zh-CN"><link data-rh="true" rel="alternate" href="https://hesaitechnology.github.io/dev/docs/how_to_guides/ptp_sync_application/" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;family=Noto+Sans+Mono:wght@400;500;700&amp;display=swap"><link rel="stylesheet" href="/dev/assets/css/styles.d61cd09d.css">
-<script src="/dev/assets/js/runtime~main.29fc415a.js" defer="defer"></script>
+<script src="/dev/assets/js/runtime~main.50b621de.js" defer="defer"></script>
 <script src="/dev/assets/js/main.f967e3c4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -19,8 +19,9 @@
 </ol>
 <p><em>Web control page - Settings (Pandar series/QT series/XT series)</em></p>
 <img src="/dev/img/ptpconfig_web.png" alt="ptpconfig_web" style="display:block;margin:0 auto;width:80%">
-<p><em>LidarUtilities - Time Sync (OT128, AT128P, etc.)</em></p>
+<p><em>LidarUtilities - Time Sync (OT128 / AT128P)</em></p>
 <img src="/dev/img/ptpconfig_LU.png" alt="ptpconfig_LU" style="display:block;margin:0 auto;width:80%">
+<p><em>Note: LidarUtilities can be downloaded from Hesai&#x27;s official website (<a href="https://www.hesaitech.com/downloads#ot128" target="_blank" rel="noopener noreferrer">OT128</a>，<a href="https://www.hesaitech.com/downloads#at128" target="_blank" rel="noopener noreferrer">AT128P</a>).</em></p>
 <ol start="2">
 <li>After connecting the lidar to the external clock source device, configure clock source to PTP master and start time synchronization between the lidar and the PTP master.</li>
 </ol>
@@ -62,7 +63,7 @@
 <p>When the PTP status displayed on the web control page or LidarUtilities interface of the lidar is updated to <em>Tracking</em> or <em>Locked</em>, it means the time synchronization between the lidar and the PTP master has been successfully established (as shown in the below figures):</p>
 <p><em>Web control page - Home (Pandar series/QT series/XT series)</em></p>
 <img src="/dev/img/trackingstatus.jpg" alt="trackingstatus" style="display:block;margin:0 auto;width:80%">
-<p><em>LidarUtilities - Time Sync (OT128, AT128P, etc.)</em></p>
+<p><em>LidarUtilities - Time Sync (OT128/ AT128P)</em></p>
 <img src="/dev/img/lockedstatus.jpg" alt="lockedstatus" style="display:block;margin:0 auto;width:80%">
 <p>Note that when the PTP status of Hesai lidar products is displayed as&#x27;<strong>Tracking</strong>&#x27;, it only means that the timestamp offset (Master Offset) between the current lidar and PTP master does not meet the &#x27;Time Offset&#x27; parameter threshold corresponding to the&#x27;<strong>Locked</strong>&#x27;status (this threshold can be configured in the lidar&#x27;s control page, default value is ±1μs, maximum support to ±100μs), while actually the lidar is already in a normal PTP time synchronization state.</p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7 numbered-heading" data-number="2.1.1.2" data-text="ptpd" data-toc-number="2.1.1.2" id="ptpd">2.1.1.2 ptpd<a href="#ptpd" class="hash-link" aria-label="Direct link to 2.1.1.2 ptpd" title="Direct link to 2.1.1.2 ptpd">​</a></h5>
@@ -117,7 +118,7 @@
 </ul>
 <p><em>Web control page - Home (Pandar series/QT series/XT series)</em></p>
 <img src="/dev/img/TSN_web.jpg" alt="TSN_web" style="display:block;margin:0 auto;width:80%">
-<p><em>LidarUtilities - Time Sync (OT128, AT128P, etc.)</em></p>
+<p><em>LidarUtilities - Time Sync (OT128/ AT128P)</em></p>
 <img src="/dev/img/TSN.png" alt="TSN" style="display:block;margin:0 auto;width:80%">
 <ul>
 <li>For the ordinary type switch that does not support TSN, it is not possible to directly use standard Linuxptp software to achieve gPTP time synchronization for multiple lidars. Instead, users can refer to the following method to modify part of the source code in the original LinuxPTP program and make it compatible with the network using regular switches that can achieve gPTP time synchronization on multiple lidars:</li>
@@ -149,7 +150,7 @@
 </ol>
 <p><em>Web control page - Home (Pandar series/QT series/XT series)</em></p>
 <img src="/dev/img/nontsn_web.jpg" alt="nontsn_web" style="display:block;margin:0 auto;width:80%">
-<p><em>LidarUtilities - Time Sync (OT128, AT128P, etc.)</em></p>
+<p><em>LidarUtilities - Time Sync (OT128 / AT128P)</em></p>
 <img src="/dev/img/nontsn.png" alt="nontsn" style="display:block;margin:0 auto;width:80%">
 <h3 class="anchor anchorWithStickyNavbar_LWe7 numbered-heading" data-number="2.2" data-text="PTP Time Synchronization through Hardware Device" data-toc-number="2.2" id="ptp-time-synchronization-through-hardware-device">2.2 PTP Time Synchronization through Hardware Device<a href="#ptp-time-synchronization-through-hardware-device" class="hash-link" aria-label="Direct link to 2.2 PTP Time Synchronization through Hardware Device" title="Direct link to 2.2 PTP Time Synchronization through Hardware Device">​</a></h3>
 <p>Please refer to the below figure for the hardware connection method of PTP time synchronization through a dedicated hardware clock device:</p>
